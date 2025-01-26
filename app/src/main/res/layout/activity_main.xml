@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView (Centered) -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quadratic Equation Solver"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <!-- LinearLayout for Coefficients a, b, and c -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvTitle"
+        android:gravity="start"
+        android:weightSum="3"
+        android:layout_marginTop="20dp">
+
+        <!-- Coefficient a -->
+        <EditText
+            android:id="@+id/etCoefficientA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="a"
+            android:textColor="@android:color/black"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:ems="3"
+            android:minHeight="48dp" />
+
+        <!-- x² after a -->
+        <TextView
+            android:id="@+id/tvX2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x² +"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:layout_marginStart="8dp" />
+
+        <!-- Coefficient b -->
+        <EditText
+            android:id="@+id/etCoefficientB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="b"
+            android:textColor="@android:color/black"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:ems="3"
+            android:minHeight="48dp" />
+
+        <!-- x after b -->
+        <TextView
+            android:id="@+id/tvX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x +"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:layout_marginStart="8dp" />
+
+        <!-- Coefficient c -->
+        <EditText
+            android:id="@+id/etCoefficientC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="c"
+            android:textColor="@android:color/black"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:ems="3"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <!-- Solve Button (Centered below the LinearLayout) -->
+
+    <!-- Reset Button (Centered below Solve Button) -->
+
+
+    <Button
+        android:id="@+id/btnSolve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCoefficientA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:background="#852F2F"
+        android:text="Solve" />
+
+
+    <!-- Result TextView (Centered below Reset Button) -->
+    <Button
+        android:id="@+id/btnInitialize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSolve"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="30dp"
+        android:background="#7E2C2C"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnInitialize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Result will be displayed here"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+</RelativeLayout>
